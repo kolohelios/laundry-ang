@@ -1,6 +1,14 @@
-h3 HOME
-
-.row
-  .col-xs-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
-    button.btn#wash(ng-class='{"btn-success": washStatus === "good", "btn-warning": washStatus === "inUse", "btn-danger": washStatus === "done"}' ng-click='changeState("washer1")') {{washStatus}}.
-    button.btn#dry(ng-class='{"btn-success": dryStatus === "good", "btn-warning": dryStatus === "inUse", "btn-danger": dryStatus === "done"}' ng-click='changeState("dryer1")') {{dryStatus}}.
+.jumbotron
+  .row.row-centered
+    .col-xs-12.col-sm-3.col-sm-offset-1.col-max
+      div
+        p.machinelabel WASHER
+        img.machine.btn.btn-default(src='/assets/washer.jpg' ng-class='{"good": washStatus === "good", "inuse": washStatus === "inUse", "done": washStatus === "done"}')
+        img.photo.img-circle(src='/assets/photo.png' ng-class='{"good": washStatus === "good", "inuse": washStatus === "inUse", "done": washStatus === "done"}')
+        p.userlabel Jon
+    .col-xs-12.col-sm-3.col-sm-offset-2.col-max
+      div
+        p.machinelabel DRYER
+        img.machine.btn.btn-default(src='/assets/dryer.jpg' ng-class='{"good": dryStatus === "good", "inuse": dryStatus === "inUse", "done": dryStatus === "done"}' ng-click='changeState("dryer1")')
+        img.photo.img-circle(src='/assets/photo.png' ng-class='{"good": dryStatus === "good", "inuse": dryStatus === "inUse", "done": dryStatus === "done"}')
+        p.userlabel Christopher

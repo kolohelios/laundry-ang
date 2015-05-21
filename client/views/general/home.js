@@ -2,12 +2,13 @@
 
 angular.module('laundry')
 .controller('Home', function($scope, $state, Machine, $interval, $window){
-  $interval(checkStatus, 300000);
+
+  // $interval(checkStatus, 300000);
   checkStatus();
-  var socket = $window.io.connect('http://localhost:8000');
-  socket.on('connect', function(){
-    console.log('connected!!!!!');
-  });
+  // var socket = $window.io.connect('http://localhost:8000');
+  // socket.on('connect', function(){
+  //   console.log('connected!!!!!');
+  // });
   // $scope.$on('socket:broadcast', function(event, data){
   //   console.log('message received', event.name);
   //
